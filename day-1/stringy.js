@@ -12,35 +12,52 @@
  * TIP: In JavaScript, how can we decipher the length of a String?
  * work?
  */
-
+/*
+I: Function takes input string
+O: Return input string length
+C:N/A
+E:N/A
+*/
 
 
 function length(string) {
     // YOUR CODE BELOW HERE //
 
-    
-
+    /*return string.length */
+    return string.length; 
     // YOUR CODE ABOVE HERE //
 }
 
 /**
  * Given an input String, return a new String forced to lowercase.
  */
+/*
+I:Function takes input string
+O: Return input string in lowercase
+C:N/A
+E:N/A
+*/
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-   
-
+   /*return string.toLowerCase() */
+    return string.toLowerCase();
     // YOUR CODE ABOVE HERE //
 }
 
 /**
  * Given an input String, return a new String forced to uppercase.
  */
+/*
+I: Function takes input string
+O: Return input string in uppercase
+C:N/A
+E:N/A
+*/
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
 
-
-
+    /*return string.toUpperCase() */
+    return string.toUpperCase();
     // YOUR CODE ABOVE HERE //
 }
 
@@ -57,11 +74,16 @@ function toUpperCase(string) {
  *
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
+/*
+I:Function takes input string
+O:Return string with dash-case in lowercase
+C:N/A
+E:N/A
+*/
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-
-
-
+    /* return string.toLowerCase().replaceAll(" ", "-") */
+    return string.toLowerCase().replaceAll(" ", "-");
     // YOUR CODE ABOVE HERE //
 }
 
@@ -77,11 +99,16 @@ function toDashCase(string) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+/*
+I: Function takes input string and char
+O: return true if string begins with char, return false if otherwise
+C:N/A
+E:N/A
+*/
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-    
-
+    /* return string.startsWith(char)*/    
+    return string.toUpperCase().startsWith(char.toUpperCase());
     // YOUR CODE ABOVE HERE //
 }
 
