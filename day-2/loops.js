@@ -77,7 +77,7 @@ function getObjectKeys(object) {
 I:function takes input Object
 O:Print object keys
 C:Must use a loop
-E:
+E:N/A
 */
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
@@ -94,10 +94,16 @@ function printObjectKeys(object) {
 /** 
  * Given an input Object, return an Array containing the Object's values.
  */
+/*
+I:Function takes input object
+O:Return an array contain object's values
+C:N/A
+E:N/A
+ */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  //Use Object.values command to gather object values
+  return Object.values(object);
   
   
   // YOUR CODE ABOVE HERE //
@@ -107,10 +113,18 @@ function getObjectValues(object) {
  * Given an input Object, loop over the Object and print its values 
  * using console.log().
  */
+/* 
+I:function takes an input object
+O:print object values
+C:must use a loop
+E:N/A
+*/
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  //use a for in loop to loop through the object
+  for (let keys in object) {
+    console.log(object[keys]);
+  }
   
   
   // YOUR CODE ABOVE HERE //
@@ -119,9 +133,16 @@ function printObjectValues(object) {
 /** 
  * Given an input Object, return the number of key/value pairs stored within that Object.
  */
+/*
+I:function takes input object
+O:return number of key/value pairs stored in object
+C:N/A
+E:N/A
+*/
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
-  
+  //return the length of object entries
+  return Object.entries(object).length;
   
   
   
@@ -132,10 +153,24 @@ function getObjectLength(object) {
  * Given an input Object, how might we loop over the Object IN REVERSE and 
  * print its values using console.log()?
  */
+/* 
+I:function takes input object
+O:print object values in reverse
+C:Must use a loop
+E:N/A
+*/
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
-  
-  
+  //create storage array arr
+var arr = []
+ //Use for in loop to push object values into arr
+  for (let key in object) {
+arr.push(object[key]);
+  }
+  //Use for loop to loop over object values in arr array
+  for (let i = arr.length - 1; i >= 0; i--) {
+    console.log(arr[i]);
+  }
   
   
   // YOUR CODE ABOVE HERE //
