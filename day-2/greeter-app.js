@@ -32,11 +32,29 @@
  *   c. The tests are CASE sensitive, so you MUST console.log('Good Night!') with
  *      the exact case.
  */
+/* 
+I:Function takes hour input
+O:Print greeting to the screen depending on the hour
+C:Must use if, else-if, and else statements
+E:N/A
+*/
 
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
-    
-    
+    // Use if statement to begin
+    if (hour <= 11) {
+        //if hour is between 0 and 11 print Good Morning!
+        console.log("Good Morning!");
+        //else if hour is between 12 and 16 print Good Afternoon!
+    } else if (hour <= 16) {
+        console.log("Good Afternoon!"); 
+        //else if hour is between 17 and 21 print Good Evening!
+    } else if (hour <= 21) {
+        console.log("Good Evening!");
+        //else print Good Night!
+    } else {
+        console.log("Good Night!");
+    }
     
     
     // YOUR CODE ABOVE HERE //
