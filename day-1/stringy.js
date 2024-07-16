@@ -107,7 +107,7 @@ E:N/A
 */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-    /* return string.startsWith(char)*/    
+    /* return string.toUpperCase().startsWith(char.toUpperCase())*/    
     return string.toUpperCase().startsWith(char.toUpperCase());
     // YOUR CODE ABOVE HERE //
 }
@@ -124,11 +124,17 @@ function beginsWith(string, char) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+/*
+I: Function takes input string and char
+O: return true if string ends with char, return false if otherwise
+C:N/A
+E:N/A
+*/
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
-
-
+    /*return string.toLowerCase().endsWith(char.toLowerCase) */
+    return string.toLowerCase().endsWith(char.toLowerCase());
     // YOUR CODE ABOVE HERE //
 }
 
@@ -137,11 +143,17 @@ function endsWith(string, char) {
  *
  * TIP: What's the operator to concatenate two Strings?
  */
+/* 
+I:Function takes two input strings
+O:Return the strings concatenated into one
+C:N/A
+E:N/A
+*/
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
-
+    /* Use concat function to concatenate stringOne and stringTwo together */
+    return stringOne.concat(stringTwo);
     // YOUR CODE ABOVE HERE //
 }
 
@@ -155,11 +167,17 @@ function concat(stringOne, stringTwo) {
  * TIP: This Function pulls out all the arguments passed to it and stores them
  *      in an Array called args.
  */
+/*
+I:Function takes two input strings and args array
+O:Return all strings joined together
+C:N/A
+E:N/A
+*/
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
-
+    /* Use join method to join stringOne and stringTwo together */
+    return args.join("");
     // YOUR CODE ABOVE HERE //
 }
 
@@ -172,11 +190,23 @@ function join(stringOne, stringTwo) {
  *
  * TIP: What property of the String do we need to compare?
  */
+/*
+I:function takes two input strings
+O:return longer string
+C:N/A
+E:N/A
+*/
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
 
-
-
+    /*Use if then statements to compare the length of the two strings */
+    if (stringOne.length > stringTwo.length) {
+        /* if stringOne.length is longer, return stringOne */
+        return stringOne;
+        /*else return stringTwo */
+    } else {
+        return stringTwo;
+    }
     // YOUR CODE ABOVE HERE //
 }
 
@@ -187,10 +217,22 @@ function longest(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+/*
+I:Function takes two input strings
+O:return 1 if stringOne is higher, -1 if stringTwo is higher, or 0 if both are equal
+C:N/A
+E:N/A
+*/
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+    //Use if then else statements to compare stringOne and stringTwo and return a number depnding on which is higher //
+    if (stringOne < stringTwo) {
+        return 1;
+    } else if (stringOne > stringTwo) {
+        return -1;
+    } else {
+        return 0;
+    }
 
     // YOUR CODE ABOVE HERE //
 }
@@ -203,10 +245,22 @@ function sortAscending(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+/*
+I:function takes two input strings
+O:return 1 if first string is lower, -1 if second string is lower, or 0 if both equal
+C:N/A
+E:N/A
+*/
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+    // Use if then else to compare the two strings and return value
+    if (stringOne > stringTwo) {
+        return 1;
+    } else if (stringOne < stringTwo) {
+        return -1;
+    } else {
+        return 0;
+    }
 
 
     // YOUR CODE ABOVE HERE //
