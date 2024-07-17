@@ -14,11 +14,17 @@
  * 
  * HINT: There is a method that can help with this.
  */
+/*
+I:Function takes input value
+O:return true if value is an array, false if otherwise
+C:N/A
+E:N/A
+*/
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    //Use isArray method to check if value is an array
+    return Array.isArray(value);
     
     // YOUR CODE ABOVE HERE //
 }

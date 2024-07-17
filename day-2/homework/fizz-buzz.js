@@ -12,25 +12,32 @@
 */
 /* 
 I:Function takes no input
-O:Print numbers 1 to 100
-C:Multiples of three must print Fizz, multiples of five mmust print Buzz, and numbers that are both print FizzBuzz
+O:Print numbers 1 to 100, multiples of three must print Fizz, multiples of five must print Buzz, multiples of both three and five must print Fizzbuzz, all other numbers must print like normal
+C:N/A
 E:N/A
 */
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
-   var number = Math.floor(Math.random()* 100) + 1;
-if (number % 3 === 0) {
-     number = "Fizz";
-     console.log(number);
-} else if (number % 5 === 0) {
-    number = "Buzz";
-    console.log(number); 
-} else if (number % 3 === 0 && number % 5 === 0) {
-     number = "FizzBuzz";
-     console.log(number);
-} else {
-    console.log(number);
-}
+    //Use empty number array to store printed numbers
+   var number = [];
+    //Use for loop to print numbers
+    for (let i = 1; i <= 100; i++) {
+        //If the remainder of i and 3 is 0 and i and 5 isn't, push Fizz
+       if (i % 3 == 0 && i % 5 != 0) {
+        number.push("Fizz");
+        //Else if the remainder of i and 3 isn't 0 and i and 5 is, push Buzz
+       } else if (i % 3 != 0 && i % 5 == 0) {
+        number.push("Buzz");
+        //Else if the remainder of i and 3 is 0 and i and 5 is also 0, push FizzBuzz
+       } else if (i % 3 === 0 && i % 5 == 0) {
+        number.push("FizzBuzz");
+        //else push i
+       } else {
+        number.push(i);
+       }
+       console.log(number);
+    }
+
     
     // YOUR CODE GOES ABOVE HERE //
 }
