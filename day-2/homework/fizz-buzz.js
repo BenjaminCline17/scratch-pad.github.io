@@ -19,18 +19,14 @@ E:N/A
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
    var number = Math.floor(Math.random()* 100) + 1;
-var storage = [];
-if (number % 3) {
+if (number % 3 === 0) {
      number = "Fizz";
-     storage.push(number);
      console.log(number);
-} else if (number % 5) {
+} else if (number % 5 === 0) {
     number = "Buzz";
-    storage.push(number);
     console.log(number); 
-} else if (number % 3 && number % 5) {
+} else if (number % 3 === 0 && number % 5 === 0) {
      number = "FizzBuzz";
-     storage.push(number);
      console.log(number);
 } else {
     console.log(number);
