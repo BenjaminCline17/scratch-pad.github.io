@@ -24,19 +24,18 @@ function fizzBuzz() {
     for (let i = 1; i <= 100; i++) {
         //If the remainder of i and 3 is 0 and i and 5 isn't, push Fizz
        if (i % 3 == 0 && i % 5 != 0) {
-        number.push("Fizz");
+        console.log("Fizz");
         //Else if the remainder of i and 3 isn't 0 and i and 5 is, push Buzz
        } else if (i % 3 != 0 && i % 5 == 0) {
-        number.push("Buzz");
+        console.log("Buzz");
         //Else if the remainder of i and 3 is 0 and i and 5 is also 0, push FizzBuzz
        } else if (i % 3 === 0 && i % 5 == 0) {
-        number.push("FizzBuzz");
+        console.log("FizzBuzz");
         //else push i
        } else {
-        number.push(i);
+        console.log(i);
        }
-       console.log(number);
-    }
+    } 
 
     
     // YOUR CODE GOES ABOVE HERE //

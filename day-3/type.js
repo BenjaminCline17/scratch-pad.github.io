@@ -23,7 +23,7 @@ E:N/A
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     
-    //Use isArray method to check if value is an array
+    //Use Array.isArray method to check if value is an array
     return Array.isArray(value);
     
     // YOUR CODE ABOVE HERE //
@@ -38,11 +38,22 @@ function isArray(value) {
  * with typeof.
  * 
  */
+/*
+I:Function takes input value
+O:return true if value is an Object, false if value is null, an Array, or a Date 
+C:N/A
+E:N/A
+*/
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
-
-    
+    //If Array.isArray(value) is true, return false
+    if (Array.isArray(value)) return false;
+    //If value equals null, return false
+    if (value === null) return false;
+    //If value is an instanceof Date, return false
+    if (value instanceof Date) return false;
+    //If the typeof value equals "object", return true
+    if (typeof value == 'object') return true;
     
     // YOUR CODE ABOVE HERE //
 }
