@@ -52,8 +52,16 @@ function isObject(value) {
     if (value === null) return false;
     //If value is an instanceof Date, return false
     if (value instanceof Date) return false;
+    //if the typeof value equals a string, return false
+    if (typeof value === "string") return false;
+    //if the typeof value equals a number, return false
+    if (typeof value === "number") return false;
+    //if the typeof value equals a boolean, return false
+    if (typeof value === "boolean") return false;
+    //if the typeof value equals undefined, return false
+    if (typeof value === "undefined") return false;
     //If the typeof value equals "object", return true
-    if (typeof value == 'object') return true;
+    if (typeof value === 'object') return true;
     
     // YOUR CODE ABOVE HERE //
 }
@@ -66,12 +74,28 @@ function isObject(value) {
  * 
  * TIP: Similar to isObject, but we must return true if the value is an Array.
  */
+/**
+ * I: function takes input value
+ * O: return true if value is an Array or an Object, return false if otherwise
+ * C:N/A
+ * E:N/A
+ */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
-    
+    //if Array.isArray(value) is true, return true
+    if (Array.isArray(value)) return true;
+    //if value equals null, return false
+    if (value === null) return false;
+    //if value is an instanceof Date, return false
+    if (value instanceof Date) return false;
+    //if typeof value equals a string, return false
+    if (typeof value === "string") return false;
+    //if typeof value equals a number, return false
+    if (typeof value === "number") return false;
+    //if typeof value equals a boolean, return false
+    if (typeof value === "boolean") return false;
+    //if typeof value equals a object, return true
+    if (typeof value === "object") return true;
     // YOUR CODE ABOVE HERE //
 }
 
@@ -93,11 +117,28 @@ function isCollection(value) {
  *    typeOf(134) -> "number"
  *    typeOf("javascript") -> "string"
  *    typeOf([1,2,3]) -> "array"
- */ 
+ */
+/**
+ * I:function takes input value 
+ * O: return the type of value as a string
+ * C:N/A
+ * E:N/A
+ *  */ 
 function typeOf(value) {
     // YOUR CODE BELOW HERE //
-    
-    
+    //if Array.isArray(value) is true, return 'array
+   if (Array.isArray(value)) return "array";
+   //if typeof value equals a string, return 'string'
+   if (typeof value === 'string') return 'string';
+   //if value equals null, return 'null'
+   if (value === null) return "null";
+   //if typeof value equals a number, return 'number'
+   if (typeof value === 'number') return 'number';
+   //if value is an instanceof Date, return 'date'
+   if (value instanceof Date) return 'date';
+   //if typeof value equals a function, return 'function'
+   if (typeof value === 'function') return 'function';
+
     
     
     // YOUR CODE ABOVE HERE //
