@@ -11,10 +11,19 @@
  * return a Function that tests whether a given value is greater than the 
  * base.
  */
+/**
+ * I:Function takes input base that could a string or number
+ * O:return a function that tests whether a given value is greater than the base
+ * C:N/A
+ * E:N/A
+ */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
-   
+    //Return function(value)
+   return function(value) {
+    //return value > base
+    return value > base;
+   }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -24,10 +33,19 @@ function createGreaterThanFilter(base) {
  * return a Function that tests whether a given value is less than the 
  * base. (test means return true or false)
  */
+/*
+I: function takes an input base
+O: return functoin that tests whether a given value is less than base
+C:N/A
+E:N/A
+ */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
-   
+    //return function(value)
+   return function(value) {
+    //return value < base 
+    return value < base;
+   }
     
     
     // YOUR CODE ABOVE HERE //
@@ -38,15 +56,23 @@ function createLessThanFilter(base) {
  * Function that tests whether a given String starts with the startsWith 
  * character.
  */
+/**
+ * I: function takes a startsWith character that is a single character
+ * O: return a function that tests whether a string starts with the startsWith character
+ * C:N/A
+ * E:N/A
+ */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
-    
+    //return function(value)
+    return function(string) {
+      //return string.startsWith(startsWith)
+     return string.startsWith(startsWith); 
+    }
     
     
     // YOUR CODE ABOVE HERE //
 }
-
 /** 
  * Given a endsWith character, which will be a single character, return a 
  * Function that tests whether a given String ends with the endsWith 
