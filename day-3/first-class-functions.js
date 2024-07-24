@@ -153,13 +153,14 @@ function allStringsPass(strings, test) {
     for (let i = 0; i < strings.length; i++) {
         if (test(strings[i]) === true) {
             output.push(strings[i]);
+            return true;
+        } else {
+            return false;
         }
-    }
-    return output
+    } return output;
     
     // YOUR CODE ABOVE HERE //
 }
-
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
