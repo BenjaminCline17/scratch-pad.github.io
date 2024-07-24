@@ -35,7 +35,7 @@ function createGreaterThanFilter(base) {
  */
 /*
 I: function takes an input base
-O: return functoin that tests whether a given value is less than base
+O: return function that tests whether a given value is less than base
 C:N/A
 E:N/A
  */
@@ -64,24 +64,35 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    //return function(value)
+    //return function(string)
     return function(string) {
       //return string.startsWith(startsWith)
-     return string.startsWith(startsWith); 
+      return string.toUpperCase().startsWith(startsWith.toUpperCase());
     }
     
     
     // YOUR CODE ABOVE HERE //
 }
+
 /** 
  * Given a endsWith character, which will be a single character, return a 
  * Function that tests whether a given String ends with the endsWith 
  * character.
  */
+/**
+ * I: function takes a endsWith character that is a single letter
+ * O: return a function that tests whether a string ends with the endsWith character
+ * C:N/A
+ * E:N/A
+ */
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
     
-    
+    //return function(string)
+    return function(string) {
+        //return string.toLowerCase().endsWith(endsWith.toLowerCase())
+        return string.toLowerCase().endsWith(endsWith.toLowerCase());
+    }
     
     
     // YOUR CODE ABOVE HERE //
@@ -94,15 +105,31 @@ function createEndsWithFilter(endsWith) {
  * TIP: You need to loop over the Strings, right? We need to pass each String to 
  * the modify Function, but we need to collect the results into some collection.
  */
+/* 
+I:function takes an array of strings and a function
+O:return the array of strings modified
+C:N/A
+E:N/A
+*/
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
-    
+    //declare storage array
+    var output = [];
+    //use for loop to iterate through strings array
+    for (let i = 0; i < strings.length; i++) {
+        if (modify(strings[i]) === true){
+            output.push(strings[i]);
+        }
+    }
+    return output;
     
     
     // YOUR CODE ABOVE HERE //
 }
-
+var uppercase = modifyStrings(['alex', 'francis'], function(string){
+    return string.toUpperCase();
+}); // ['ALEX', 'FRANCIS]
+console.log(uppercase);
 
 
 /** 
