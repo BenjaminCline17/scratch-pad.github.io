@@ -117,19 +117,17 @@ function modifyStrings(strings, modify) {
     var output = [];
     //use for loop to iterate through strings array
     for (let i = 0; i < strings.length; i++) {
-        if (modify(strings[i]) === true){
-            output.push(strings[i]);
-        }
+    //invoke modify on current strings index
+     modify(strings[i]);
+     //push result of invoking modify on strings index into output
+     output.push(modify(strings[i]));
     }
+    //return output
     return output;
     
     
     // YOUR CODE ABOVE HERE //
 }
-var uppercase = modifyStrings(['alex', 'francis'], function(string){
-    return string.toUpperCase();
-}); // ['ALEX', 'FRANCIS]
-console.log(uppercase);
 
 
 /** 
@@ -141,11 +139,23 @@ console.log(uppercase);
  * 
  * TIP: You need to loop over the Strings, right? And pass them to the test?
  */
+/*
+I: function takes array of strings and a function designed to test the string
+O: return true if all strings pass the test
+C:N/A
+E:N/A
+*/
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+    //declare output array
+    var output = [];
+    //for loop to iterate through the strings array
+    for (let i = 0; i < strings.length; i++) {
+        if (test(strings[i]) === true) {
+            output.push(strings[i]);
+        }
+    }
+    return output
     
     // YOUR CODE ABOVE HERE //
 }
