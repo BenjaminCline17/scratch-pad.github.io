@@ -151,13 +151,14 @@ function allStringsPass(strings, test) {
     var output = [];
     //for loop to iterate through the strings array
     for (let i = 0; i < strings.length; i++) {
-        if (test(strings[i]) === true) {
+        if (strings.every(test)) {
             output.push(strings[i]);
-            return true;
+        } else if (strings.every(test) === false) {
+            return false;
         } else {
             return false;
         }
-    } return output;
+    } return output.every(test);
     
     // YOUR CODE ABOVE HERE //
 }
