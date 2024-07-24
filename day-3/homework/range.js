@@ -21,12 +21,26 @@
  *  b. you'll need a loop, which one is best?
  *  c. you'll wanna make use of the push() method of Array.
  */
+/* 
+I: functation takes two input integers
+O: returns an array containing all integers between the two parameters
+C:
+E:
+*/
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
-    
+    //declare output array
+    var output = [];
+    //while loop to add up to end
+    while (start < end) {
+        output.push(start);
+        start++;
+    }
+    //while loop to subtract down to end
+    while (start >= end) {
+        output.push(start);
+        start--; 
+    } return output; //return output
     // YOUR CODE GOES ABOVE HERE //
 }
 

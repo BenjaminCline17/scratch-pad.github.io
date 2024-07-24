@@ -151,13 +151,19 @@ function allStringsPass(strings, test) {
     var output = [];
     //for loop to iterate through the strings array
     for (let i = 0; i < strings.length; i++) {
+        //if every string passes the test
         if (strings.every(test)) {
+            //push strings[i] into output array
             output.push(strings[i]);
+            //else if every string does not pass the test
         } else if (strings.every(test) === false) {
+            //return false
             return false;
+            //else return false
         } else {
             return false;
         }
+        //return true if every index in output passes the test
     } return output.every(test);
     
     // YOUR CODE ABOVE HERE //
