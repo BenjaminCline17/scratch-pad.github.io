@@ -63,15 +63,22 @@ function makeContactList() {
             contacts.push(contact);
         },
         findContact: function(fullName) {
-           if (fullName == contact) {
-            return contact;
-           } else {
-            return undefined;
-           }
+            //for in loop to iterate through contacts key values
+          for (let keys in contacts) {
+            console.log(contacts[keys].nameFirst + " " + contacts[keys].nameLast);
+            //if fullName equals contacts[keys], return contact
+            if (fullName === contacts[keys].nameFirst + " " + contacts[keys].nameLast) {
+                return contacts[keys];
+                //else return undefined
+            } else {
+                return undefined;
+            }
+          }  
         },
         removeContact: function(contact) {
-            return contacts.splice(contact);
-        }
+           //return contacts.splice deleting one item from contact 
+            return contacts.splice(contact, 1);
+        },
     }
 }
 
