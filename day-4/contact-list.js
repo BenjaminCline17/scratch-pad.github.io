@@ -32,10 +32,19 @@
  *          WARNING: To pass this test, the LAST full name should have NO
  *          new-line character added after it!
  */
-
+/* 
+I: function takes input id, nameFirst, nameLast
+O: return a contact object
+C:N/A
+E:N/A
+*/
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-    
+    var contact = {
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast
+    }; return contact;
 } 
 
 
@@ -43,12 +52,25 @@ function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    var contacts;
+    var contacts = [];
     
     return {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
+        },
+        addContact: function(contact) {
+            contacts.push(contact);
+        },
+        findContact: function(fullName) {
+           if (fullName == contact) {
+            return contact;
+           } else {
+            return undefined;
+           }
+        },
+        removeContact: function(contact) {
+            return contacts.splice(contact);
         }
     }
 }
