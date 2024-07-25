@@ -79,7 +79,14 @@ function makeContactList() {
             return contacts.splice(contact, 1);
         },
         printAllContactNames: function() {
-            
+            //declare output array
+            var output = [];
+           //for in loop to iterate through contacts key values
+           for (let keys in contacts) {
+            //push contacts[keys].nameFirst + " " + contacts[keys].nameLast into output array
+            output.push(contacts[keys].nameFirst + " " + contacts[keys].nameLast);
+            //return output.join("\n") to separate values by lines
+           } return output.join("\n");
         }
     }
 }
