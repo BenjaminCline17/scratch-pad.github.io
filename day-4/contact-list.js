@@ -65,7 +65,6 @@ function makeContactList() {
         findContact: function(fullName) {
             //for in loop to iterate through contacts key values
           for (let keys in contacts) {
-            console.log(contacts[keys].nameFirst + " " + contacts[keys].nameLast);
             //if fullName equals contacts[keys], return contact
             if (fullName === contacts[keys].nameFirst + " " + contacts[keys].nameLast) {
                 return contacts[keys];
@@ -79,6 +78,9 @@ function makeContactList() {
            //return contacts.splice deleting one item from contact 
             return contacts.splice(contact, 1);
         },
+        printAllContactNames: function() {
+            
+        }
     }
 }
 
