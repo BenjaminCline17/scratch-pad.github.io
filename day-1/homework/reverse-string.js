@@ -19,12 +19,25 @@
  *  d. how do you concatenate Strings? What operator do we use?
  */
 
+//I: Function takes in a input string
+//O: Function should return a string that is a reversed format of the input string
+//C:Must use a for loop, cannot use any methods
+//E:N/A
+
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
     
-    
-    
-    
+    //Create a variable to hold the result
+    var output = "";
+    //create a for loop to iterate through the input string
+  for (let i = input.length - 1; i >= 0; i--){
+    //add current letter to output
+    output += input[i];
+  }
+
+
+    //return output
+    return output;
     // YOUR CODE GOES ABOVE HERE //
 }
 
