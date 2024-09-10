@@ -33,11 +33,27 @@
  *      the exact case.
  */
 
+//I:Function takes in hour number
+//O:Function should print a greeting to the screen depending on the input hour
+//C:Must use if, else-if, and else
+//E:N/A
 function greeter(hour) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+    //Use if statement to see if hour is less than or equal to 11
+    if (hour <= 11){
+        //if hour equals 0-11, print "Good Morning!"
+        console.log("Good Morning!");
+        //else if hour is less than or equal to 16, print "Good Afternoon!"
+    } else if(hour <= 16) {
+        console.log("Good Afternoon!");
+        //else if hour is less than or equal to 21, print "Good Evening!"
+    } else if(hour <= 21) {
+        console.log("Good Evening!");
+        //else, print "Good Night!"
+    } else {
+        console.log("Good Night!");
+    }
     
     // YOUR CODE ABOVE HERE //
 }
