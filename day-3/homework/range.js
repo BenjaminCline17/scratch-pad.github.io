@@ -21,12 +21,25 @@
  *  b. you'll need a loop, which one is best?
  *  c. you'll wanna make use of the push() method of Array.
  */
+
+//I:Function takes in two integers
+//O:Function should return an array containing all integers between the two parameters
+//C:N/A
+//E:N/A
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
-    
+    var output = [];
+    if (start < end){
+        for (let i = start; i <= end; i++){
+            output.push(i);
+        }
+    }
+    if (start > end){
+        for (let i = start; i >= end; i--){
+            output.push(i);
+        }
+    }
+    return output;
     // YOUR CODE GOES ABOVE HERE //
 }
 
