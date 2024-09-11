@@ -14,11 +14,22 @@
  * 
  * HINT: There is a method that can help with this.
  */
+
+//I:Function takes in an input value
+//O:Function should return true if the input value is an array, otherwise return false
+//C:N/A
+//E:N/A
 function isArray(value) {
     // YOUR CODE BELOW HERE //
     
-    
-    
+   //Use if statement to check if value is an array 
+    if (Array.isArray(value) === true){
+        //if value is an array, return true
+        return true;
+        //else, return false
+    } else {
+        return false;
+    }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -36,16 +47,53 @@ function isArray(value) {
  * HINT: look up how to figure out if something is an instance of the Date object.
  * 
  */
+
+//I:Function takes an input value
+//O:Function should return true if value is an object intended as a collection
+//C:N/A
+//E:N/A
 function isObject(value) {
     // YOUR CODE BELOW HERE //
     
-
-    
-    
-    
+    //use if statement to check if value is an array
+    if (Array.isArray(value) === true){
+        //if value is an array, return false
+        return false;
+    }
+    //use if statement to check if value is null
+    else if (value === null) {
+        //if value is null, return false
+        return false;
+    }
+    //use if statement to check if value is an instance of Date
+    if (value instanceof Date) {
+        //if value is an instance of Date, return false;
+        return false;
+    }
+    //Use if statement to check if value is an object
+    if (typeof value === "object") {
+        //if value is an object, return true
+        return true;
+    }
+    //Use if statement to check if value is a string
+    if (typeof value === "string") {
+        //if value is a string, return false
+        return false;
+    } //Use if statement to determine if value is undefined
+    if (typeof value === "undefined"){
+        //if value is undefined return false
+        return false;
+    }//Use if statement to determine if value is a number
+    if (typeof value === "number"){
+        //if value is a number return false
+        return false;
+    }//Use if statement to determine if value is a boolean
+    if (typeof value === "boolean"){
+        //if value is a boolean return false
+        return false;
+    }
     // YOUR CODE ABOVE HERE //
 }
-
 
 
 /** 
