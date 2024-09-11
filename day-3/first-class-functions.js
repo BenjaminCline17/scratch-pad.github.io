@@ -11,10 +11,18 @@
  * return a Function that tests whether a given value is greater than the 
  * base.
  */
+
+//I:Function takes in an input base, which could be a string or number
+//O:Function should return a function that tests if a given value is greater than the base
+//C:N/A
+//E:N/A
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
-   
+    //Return a function with a value input
+   return function(value){
+    //return a test that determines if value is greater than base
+    return value > base;
+   }
     
     // YOUR CODE ABOVE HERE //
 }
@@ -25,10 +33,18 @@ function createGreaterThanFilter(base) {
  * base. (test means return true or false)
  * 
  */
+
+//I:Function takes in an input base, which could be a string or number
+//O:Function should return a function that tests if a given value is less than the base
+//C:N/A
+//E:N/A
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    
-  
+    //Return a function with a value input
+    return function(value){
+        //return a test that determines if value is less than base
+        return value < base;
+    }
     
     
     // YOUR CODE ABOVE HERE //
@@ -41,10 +57,17 @@ function createLessThanFilter(base) {
  * 
  * This function needs to be case insensitive.
  */
+
+//I:Function takes in a startsWith character, which is a single character
+//O:Function should return a function that tests if a given string starts with the startsWith character
+//C:N/A
+//E:N/A
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    
-    
+    //return a function with a string input
+    return function(string){
+        return string.toLowerCase().startsWith(startsWith.toLowerCase());
+    }
     
     
     // YOUR CODE ABOVE HERE //
@@ -57,10 +80,17 @@ function createStartsWithFilter(startsWith) {
  * 
  * This function needs to be case insensitive.
  */
+
+//I:Function takes in a endsWith character
+//O:Return a function taht tests if a given string ends with the endsWith character
+//C:N/A
+//E:N/A
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
     
-    
+    return function(string){
+        return string.toLowerCase().endsWith(endsWith.toLowerCase());
+    }
     
     
     // YOUR CODE ABOVE HERE //
@@ -73,12 +103,20 @@ function createEndsWithFilter(endsWith) {
  * TIP: You need to loop over the Strings, right? We need to pass each String to 
  * the modify Function, but we need to collect the results into some collection.
  */
+
+//I:Function takes in an array of strings and a function
+//O:Function should return a modified array of strings from the input array
+//C:N/A
+//E:N/A
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
     
+    var output = [];
     
-    
-    
+    for(let i = 0; i < strings.length; i++){
+        output.push(modify(strings[i]));
+    }
+    return output;
     // YOUR CODE ABOVE HERE //
 }
 
@@ -97,7 +135,14 @@ function modifyStrings(strings, modify) {
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
-    
+
+    for(let i = 0; i < strings.length; i++){
+        if(strings.every(test) === true){
+            return true;
+        } else {
+            return false;
+        }
+    }
     
     
     // YOUR CODE ABOVE HERE //
