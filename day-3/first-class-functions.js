@@ -66,6 +66,7 @@ function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
     //return a function with a string input
     return function(string){
+        //return the result of testing if input string starts with input startsWith
         return string.toLowerCase().startsWith(startsWith.toLowerCase());
     }
     
@@ -87,8 +88,9 @@ function createStartsWithFilter(startsWith) {
 //E:N/A
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
-    
+    //return a function with a string input
     return function(string){
+        //return the result of testing if input string ends with input endsWith
         return string.toLowerCase().endsWith(endsWith.toLowerCase());
     }
     
@@ -110,12 +112,13 @@ function createEndsWithFilter(endsWith) {
 //E:N/A
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
+    //declare output as an empty array
     var output = [];
-    
+    //use for loop to iterate through strings array and push the result of invoking modify on the strings array into output
     for(let i = 0; i < strings.length; i++){
         output.push(modify(strings[i]));
     }
+    //return output
     return output;
     // YOUR CODE ABOVE HERE //
 }
@@ -135,10 +138,13 @@ function modifyStrings(strings, modify) {
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
     
-
+    //use for loop to iterate through strings array
     for(let i = 0; i < strings.length; i++){
+        //use if statement to see if all strings in the strings array pass the test function
         if(strings.every(test) === true){
+            //if they all pass, return true
             return true;
+            //otherwise return false
         } else {
             return false;
         }

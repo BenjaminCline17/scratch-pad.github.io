@@ -28,17 +28,19 @@
 //E:N/A
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
+    //declare output as an empty array
     var output = [];
+    //if start is less than end, use a for loop to count up from start to end, pushing each number into the output array
     if (start < end){
         for (let i = start; i <= end; i++){
             output.push(i);
         }
-    }
+    } //if start is greater than end, use a for loop to count down from start to end, pushing each number into the output array
     if (start > end){
         for (let i = start; i >= end; i--){
             output.push(i);
         }
-    }
+    }//return output
     return output;
     // YOUR CODE GOES ABOVE HERE //
 }
